@@ -1,0 +1,110 @@
+syntax = "proto3";
+
+package battlefield;
+
+//Proto Class
+message Soldier
+{
+    int32 SoldierID = 1;
+    bool isCommander = 2;
+    bool isAlive = 3;
+    repeated int32 currentLocation = 4;
+    int32 speed = 5;
+}
+//Needed for array of [x,y] coordinates
+message intPair {
+    int32 x = 1;
+    int32 y = 2;
+}
+message intPairs
+{
+    repeated intPair positions = 1;
+}
+
+//Needed for array of 2D Array
+message intRow 
+{
+    repeated int32 values = 1;
+}
+message int2DArray 
+{
+    repeated intRow rows = 1;
+}
+
+
+//Battle Initialization
+message battleGenerationRequest 
+{
+  int32 size = 1;
+  repeated Soldier soldiers = 2;
+  int32 totalSimulationTime = 3;
+  int32 missileFrequency = 4;
+  int32 CommanderID = 5;
+}
+message battleGenerationResponse
+{
+    int32 result = 1;
+}
+
+//Launching Missile
+message missileLauncherRequest 
+{
+  int32 missileType = 1;
+  repeated int32 missileEpicenter = 2;
+  int32 time = 3;
+}
+message missileLauncherResponse
+{
+    intPairs positions = 1;
+    int32 time = 2;
+    int32 type =3;
+}
+
+//Updating Commander
+message commanderUpdaterRequest 
+{
+    Soldier Commander = 1;
+}
+message commanderUpdaterResponse
+{
+    int32 result = 1;
+}
+
+//Updating Grid
+message gridUpdaterRequest 
+{
+    repeated Soldier soldiers = 1;
+}
+message gridUpdaterResponse
+{
+   int32 result = 1;
+}
+
+//Displaying Grid
+message printLayoutRequest 
+{
+    int32 req = 1;
+}
+message printLayoutResponse
+{
+   int2DArray grid = 1;
+}
+
+//Services
+service battleServicer 
+{
+    //Battle Initialization
+    rpc battleGenerator (battleGenerationRequest) returns (battleGenerationResponse);
+
+    //Missile Launch
+    rpc missileLauncher (missileLauncherRequest) returns (missileLauncherResponse);
+
+    //Upating Commander
+    rpc commanderUpdater (commanderUpdaterRequest) returns (commanderUpdaterResponse);
+
+    //Updating Grid
+    rpc gridUpdater (gridUpdaterRequest) returns (gridUpdaterResponse);
+
+    //Displaying Grid
+    rpc printLayout (printLayoutRequest) returns (printLayoutResponse);
+}

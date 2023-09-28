@@ -1,0 +1,205 @@
+-------------BATTLEFIELD SIMULATOR-------------
+
+Enter the Battlefield Grid Size (N) : 
+3
+
+Invalid value entered for N. N should be at least 4. Please Retry. (Press enter to go back)
+
+-------------BATTLEFIELD SIMULATOR-------------
+
+Enter the Battlefield Grid Size (N) : 
+4
+
+Enter the Number of Soldiers (M) : 
+6
+
+Invalid value entered for M. Must be between 10 and 16(N*N). Please Retry. (Press enter to go back)
+
+-------------BATTLEFIELD SIMULATOR-------------
+
+Enter the Battlefield Grid Size (N) : 
+4
+
+Enter the Number of Soldiers (M) : 
+10
+
+Enter the Missile Frequency (t) (seconds after which a missile is fired) : 
+10
+
+Enter the Total Battle Time (T) (seconds) : 
+4
+
+Invalid value entered for T. Must be at least 10(t). Please Retry. (Press enter to go back)
+-------------BATTLEFIELD SIMULATOR-------------
+
+Enter the Battlefield Grid Size (N) :
+4 
+
+Enter the Number of Soldiers (M) : 
+14
+
+Enter the Missile Frequency (t) (seconds after which a missile is fired) : 
+10
+
+Enter the Total Battle Time (T) (seconds) : 
+40
+------------- BATTLEFIELD SIMULATOR -------------
+
+
+1.) View Battlefield
+
+2.) View Battalion
+
+3.) Exit Simulator
+
+Enter Command (1/2/3) : 1
+--------------------- BATTLEFIELD ---------------------
+
+
+Battle Status : Ongoing
+
+Casualties : 1/14
+
+Current Iteration : 1
+
+Battlefield:-
+Legend :-
+R = Red Zone
+D = Dead Soldier
+_ = Empty
+<Number> : Soldier ID (Alive)
+
+1    _    10   5    
+
+12   _    D    13   
+
+4    3    9    2    
+
+6    7    8    11   
+
+
+
+Enter 1 to return to simulator : 1
+------------- BATTLEFIELD SIMULATOR -------------
+
+
+1.) View Battlefield
+
+2.) View Battalion
+
+3.) Exit Simulator
+
+Enter Command (1/2/3) : 1
+--------------------- BATTLEFIELD ---------------------
+
+
+Battle Status : Ongoing
+
+Casualties : 2/14
+
+Current Iteration : 2
+
+Battlefield:-
+Legend :-
+R = Red Zone
+D = Dead Soldier
+_ = Empty
+<Number> : Soldier ID (Alive)
+
+1    11   10   5    
+
+12   8    D    13   
+
+4    3    R    D    
+
+6    7    R    R    
+
+
+
+Enter 1 to return to simulator : 1
+------------- BATTLEFIELD SIMULATOR -------------
+
+
+1.) View Battlefield
+
+2.) View Battalion
+
+3.) Exit Simulator
+
+Enter Command (1/2/3) : 1
+--------------------- BATTLEFIELD ---------------------
+
+
+Battle Status : Ongoing
+
+Casualties : 2/14
+
+Current Iteration : 3
+
+Battlefield:-
+Legend :-
+R = Red Zone
+D = Dead Soldier
+_ = Empty
+<Number> : Soldier ID (Alive)
+
+1    11   10   5    
+
+12   8    D    13   
+
+R    3    4    D    
+
+6    7    _    _    
+
+
+
+Enter 1 to return to simulator : 1
+------------- BATTLEFIELD SIMULATOR -------------
+
+
+1.) View Battlefield
+
+2.) View Battalion
+
+3.) Exit Simulator
+
+Enter Command (1/2/3) : 1
+--------------------- BATTLEFIELD ---------------------
+
+
+Battle Status : Lost
+
+Casualties : 14/14
+
+Current Iteration : 4
+
+Battlefield:-
+Legend :-
+R = Red Zone
+D = Dead Soldier
+_ = Empty
+<Number> : Soldier ID (Alive)
+
+D    D    D    D    
+
+D    D    D    D    
+
+R    D    D    D    
+
+D    D    R    R    
+
+
+
+Enter 1 to return to simulator : 1
+------------- BATTLEFIELD SIMULATOR -------------
+
+
+1.) View Battlefield
+
+2.) View Battalion
+
+3.) Exit Simulator
+
+Enter Command (1/2/3) : 3
+Simulation Terminated.
+
